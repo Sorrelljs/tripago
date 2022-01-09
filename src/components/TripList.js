@@ -10,7 +10,7 @@ import './TripList.css'
 // the whole component over and over 
 
 export default function TripList() {
-    const [url, setUrl] = useState('http://localhost:3000/tripsff')
+    const [url, setUrl] = useState('http://localhost:3000/trips', { type: 'GET'})
     const { data, isPending, error } = useFetch(url)
     return (
         <div className="trip-list">
